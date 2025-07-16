@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/sign-up.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Cadastrar</h1>
+
+        <div id="msgError"></div>
+        <div id="msgSuccess"></div>
+
+        <div class="label-float">
+          <input type="text" id="nome" placeholder=" " required />
+          <label id="labelNome" for="nome">Nome</label>
+        </div>
+
+        <div class="label-float">
+          <input type="text" id="usuario" placeholder=" " required />
+          <label id="labelUsuario" for="usuario">Usuario</label>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="senha" placeholder=" " required />
+          <label id="labelSenha" for="senha">Senha</label>
+          <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="confirmSenha" placeholder=" " required />
+          <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
+          <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+
+        <div class="justify-center">
+          <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function cadastrar() {
+        const nome = document.getElementById('nome').value;
+        const usuario = document.getElementById('usuario').value;
+        const senha = document.getElementById('senha').value;
+        const confirmSenha = document.getElementById('confirmSenha').value;
+        const msgError = document.getElementById('msgError');
+        const msgSuccess = document.getElementById('msgSuccess');
+
+        msgError.innerText = '';
+        msgSuccess.innerText = '';
+
+        if (!nome || !usuario || !senha || !confirmSenha) {
+          msgError.innerText = 'Preencha todos os campos.';
+          msgError.style.color = 'red';
+          return;
+        }
+
+        if (senha !== confirmSenha) {
+          msgError.innerText = 'As senhas não coincidem.';
+          msgError.style.color = 'red';
+          return;
+        }
+
+        // Salva os dados no localStorage
+        localStorage.setItem('usuario', JSON.stringify({
+          nome: nome,
+          usuario: usuario,
+          senha: senha
+        }));
+
+        msgSuccess.innerText = 'Usuário cadastrado com sucesso!';
+        msgSuccess.style.color = 'green';
+
+        // Limpa os campos
+        document.getElementById('nome').value = '';
+        document.getElementById('usuario').value = '';
+        document.getElementById('senha').value = '';
+        document.getElementById('confirmSenha').value = '';
+      }
+    </script>
+  </body>
+</html>
