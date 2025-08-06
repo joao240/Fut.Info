@@ -107,3 +107,8 @@ h1{
   text-decoration: none; 
  
 }
+footer {
+  text-align: center;
+  margin: 20px;
+  color: #8ea18a;
+}
