@@ -1,0 +1,328 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classificação Brasileirão Série A</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d4edc9;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .menu {
+      background-color: #4c9a2a;
+      padding: 20px;
+    }
+
+    .menu span {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .menu input {
+      margin-left: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    h1, h2 {
+      margin: 5px 0;
+      color: rgb(255, 255, 255);
+       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 90%;
+      background-color: white;
+      color: black;
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    table th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      margin: 20px;
+      color: #8ea18a;
+    }
+    .bola{
+      width: 95px;
+      position: absolute;
+      top: 0%;
+      left: 1%;
+    }
+    .palavras-menu{
+      font-size: 25px;
+      color: inherit;
+      text-decoration: none; 
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="menu">
+      <img class="bola" src="img/bolanogolcerta.png" alt="">
+      <a class="palavras-menu" href="/tabela">Classificação |ㅤ</a>
+      <a class="palavras-menu" href="/jogos">Jogosㅤ|ㅤ</a>
+      <a class="palavras-menu" href="/noticias">Notícias ㅤ|ㅤ</a>
+      <a class="palavras-menu" href="/menu">Tela Inicial ㅤ</a>
+      <input class="palavras-menu" type="text" id="search" placeholder="Buscar time...">
+    </div>
+    <h1>Classificação</h1>
+    <h2>Brasileirão Série A</h2>
+  </header>
+
+  <table id="tabela">
+    <tr>
+      <th>Pos</th>
+      <th>Time</th>
+      <th>P</th>
+      <th>J</th>
+      <th>V</th>
+      <th>E</th>
+      <th>D</th>
+      <th>Últimos 5</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Atlético Mineiro</td>
+      <td>26</td>
+      <td>13</td>
+      <td>8</td>
+      <td>0</td>
+      <td>0</td>
+      <td>✅✅✅✅✅</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Flamengo</td>
+      <td>24</td>
+      <td>11</td>
+      <td>7</td>
+      <td>3</td>
+      <td>1</td>
+      <td>✅❌✅⚪✅</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Cruzeiro</td>
+      <td>24</td>
+      <td>12</td>
+      <td>7</td>
+      <td>3</td>
+      <td>1</td>
+      <td>✅❌❌✅✅</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Bragantino</td>
+      <td>23</td>
+      <td>12</td>
+      <td>7</td>
+      <td>2</td>
+      <td>3</td>
+      <td>⚪❌✅✅⚪</td>
+    </tr>
+     <tr>
+      <td>5</td>
+      <td>Palmeiras</td>
+      <td>22</td>
+      <td>11</td>
+      <td>7</td>
+      <td>1</td>
+      <td>3</td>
+      <td>⚪✅✅⚪❌</td>
+    </tr>
+     <tr>
+      <td>6</td>
+      <td>Bahia</td>
+      <td>21</td>
+      <td>12</td>
+      <td>6</td>
+      <td>3</td>
+      <td>3</td>
+      <td>❌✅⚪✅✅</td>
+    </tr>
+     <tr>
+      <td>7</td>
+      <td>Fluminense</td>
+      <td>20</td>
+      <td>11</td>
+      <td>6</td>
+      <td>2</td>
+      <td>3</td>
+      <td>⚪✅❌⚪⚪</td>
+    </tr>
+     <tr>
+      <td>8</td>
+      <td>Botafogo</td>
+      <td>18</td>
+      <td>11</td>
+      <td>5</td>
+      <td>3</td>
+      <td>3</td>
+      <td>✅✅⚪✅⚪</td>
+    </tr>
+     <tr>
+      <td>9</td>
+      <td>Mirassol</td>
+      <td>17</td>
+      <td>11</td>
+      <td>4</td>
+      <td>5</td>
+      <td>2</td>
+      <td>✅⚪✅❌⚪</td>
+    </tr>
+     <tr>
+      <td>10</td>
+      <td>Corithias</td>
+      <td>16</td>
+      <td>12</td>
+      <td>4</td>
+      <td>4</td>
+      <td>4</td>
+      <td>⚪⚪✅⚪✅</td>
+    </tr>
+     <tr>
+      <td>11</td>
+      <td>Gremio</td>
+      <td>16</td>
+      <td>12</td>
+      <td>4</td>
+      <td>4</td>
+      <td>4</td>
+      <td>❌✅⚪✅⚪</td>
+    </tr>
+     <tr>
+      <td>12</td>
+      <td>Ceara</td>
+      <td>15</td>
+      <td>11</td>
+      <td>4</td>
+      <td>3</td>
+      <td>4</td>
+      <td>❌❌⚪✅⚪</td>
+    </tr>
+     <tr>
+      <td>13</td>
+      <td>Vasco</td>
+      <td>13</td>
+      <td>12</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+      <td>⚪❌✅⚪❌</td>
+    </tr>
+     <tr>
+      <td>14</td>
+      <td>São Paulo</td>
+      <td>12</td>
+      <td>12</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+      <td>⚪✅❌❌⚪</td>
+    </tr>
+     <tr>
+      <td>15</td>
+      <td>Santos</td>
+      <td>11</td>
+      <td>12</td>
+      <td>3</td>
+      <td>2</td>
+      <td>7</td>
+      <td>❌⚪⚪✅⚪</td>
+    </tr>
+     <tr>
+      <td>16</td>
+      <td>Vitória</td>
+      <td>11</td>
+      <td>12</td>
+      <td>2</td>
+      <td>5</td>
+      <td>5</td>
+      <td>⚪❌❌✅⚪</td>
+    </tr>
+     <tr>
+      <td>17</td>
+      <td>Internacional</td>
+      <td>11</td>
+      <td>12</td>
+      <td>2</td>
+      <td>5</td>
+      <td>5</td>
+      <td>✅❌⚪✅⚪</td>
+    </tr>
+     <tr>
+      <td>18</td>
+      <td>Fortaleza</td>
+      <td>10</td>
+      <td>12</td>
+      <td>2</td>
+      <td>4</td>
+      <td>6</td>
+      <td>⚪✅⚪❌❌</td>
+    </tr>
+     <tr>
+      <td>19</td>
+      <td>Juventude</td>
+      <td>8</td>
+      <td>11</td>
+      <td>2</td>
+      <td>2</td>
+      <td>7</td>
+      <td>⚪❌❌⚪❌</td>
+    </tr>
+     <tr>
+      <td>20</td>
+      <td>Souza</td>
+      <td>3</td>
+      <td>11</td>
+      <td>0</td>
+      <td>3</td>
+      <td>8</td>
+      <td>❌❌⚪❌⚪</td>
+    </tr>
+
+  </table>
+
+  <footer>
+    Instituto de Computação Brasileirão - BH 2025
+  </footer>
+
+  <script>
+    document.getElementById('search').addEventListener('keyup', function() {
+      var searchText = this.value.toLowerCase();
+      var rows = document.querySelectorAll('#tabela tr');
+
+      for (var i = 1; i < rows.length; i++) { // começa do 1 pra ignorar header
+        var team = rows[i].cells[1].textContent.toLowerCase();
+        if (team.includes(searchText)) {
+          rows[i].style.display = '';
+        } else {
+          rows[i].style.display = 'none';
+        }
+      }
+    });
+  </script>
+</body>
