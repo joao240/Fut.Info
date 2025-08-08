@@ -1,45 +1,37 @@
-# ⚽ Fut Info - Tabela do Brasileirão
+# ⚽ Fut.Info – Tabela do Brasileirão
 
-**Fut Info** é um projeto desenvolvido como parte de um trabalho do curso, com o objetivo de aplicar conceitos de lógica de programação, utilizando **Node.js**, **Express** e **EJS**. O tema escolhido foi a **tabela do Brasileirão**, com informações como classificação, resultados de jogos, e notícias atualizadas sobre o campeonato.
+**Fut.Info** é uma aplicação web desenvolvida como parte de um trabalho acadêmico, com o objetivo de aprender e aplicar lógica de programação utilizando Node.js, Express e EJS. Através do projeto, é possível visualizar a tabela do Brasileirão, resultados de jogos e notícias atualizadas, tudo com renderização dinâmica em EJS.
 
-## 🎯 Objetivo
+---
 
-O projeto tem como foco:
+## 🎯 Objetivos
 
-- Praticar a **lógica de programação**
-- Desenvolver uma aplicação com **renderização dinâmica usando EJS**
-- Utilizar **Express** para gerenciamento de rotas e estruturação do backend
-- Trabalhar com organização de dados esportivos em tempo real ou simulados
+- Praticar lógica de programação com JavaScript e Node.js  
+- Criar uma aplicação backend com Express para gerenciar rotas e dados  
+- Renderizar páginas dinâmicas com EJS  
+- Exibir dados esportivos do Brasileirão, reais ou simulados  
 
-## 👨‍💻 Divisão do Trabalho
+---
 
-O grupo é composto por 6 integrantes. A divisão foi feita da seguinte forma:
+## 👥 Divisão do Trabalho
 
-- Dois membros ficaram responsáveis pelo **desenvolvimento do backend**
-- Os demais integrantes atuam em outras áreas como frontend, pesquisa de dados e conteúdo
+O projeto foi realizado em grupo (6 integrantes), com a seguinte divisão:
 
-## 🧰 Tecnologias Utilizadas
+- **2 membros** ficaram responsáveis pela parte de **backend**, utilizando Node.js, Express e EJS  
+- **4 membros** atuaram no **frontend**, pesquisa de dados e conteúdo visual  
 
-- Node.js
-- Express.js
-- EJS (Embedded JavaScript)
-- HTML e CSS
-- (Opcional) APIs públicas para dados do Brasileirão
+> 💡 Eu (João Victor) fiquei encarregado de trabalhar com a tecnologia **EJS**, responsável por renderizar as páginas de forma dinâmica
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [EJS (Embedded JavaScript)](https://ejs.co/)
+- HTML e CSS  
+- (Opcional) APIs públicas de futebol
+
+---
 
 ## 📁 Estrutura do Projeto
-
-fut-info/
-├── public/ # Arquivos estáticos (CSS, imagens, etc.)
-├── views/ # Páginas EJS
-├── routes/ # Arquivos de rotas
-├── controllers/ # Lógica de backend
-├── app.js # Arquivo principal do servidor
-└── README.md
-
-
-## ✅ Funcionalidades Planejadas
-
-- Exibir a **classificação atual** dos times do Brasileirão
-- Mostrar **notícias esportivas** recentes
-- Página com **resultados de jogos**
-- Interface simples e funcional usando EJS
