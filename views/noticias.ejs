@@ -1,0 +1,156 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Notícias do Brasileirão Série A</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #00796b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .message {
+      display: none;
+      text-align: center;
+      background-color: #c8e6c9;
+      color: #256029;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #004d40;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+
+    button:hover {
+      background-color: #00251a;
+    }
+
+    .news-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .news-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .news-item:last-child {
+      border: none;
+    }
+
+    .news-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .news-description {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .news-link {
+      font-size: 14px;
+      color: #00695c;
+      text-decoration: none;
+    }
+
+    .news-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>Notícias do Brasileirão Série A</header>
+
+  <main>
+    <div class="message" id="message">Notícias atualizadas com sucesso!</div>
+    <button onclick="atualizarNoticias()">Atualizar Notícias</button>
+    <div class="news-container" id="news-container">
+      <!-- Notícias serão inseridas aqui -->
+    </div>
+  </main>
+
+  <script>
+    const apiKey = "2901390da5c34cf6bec761a48566f9f4";
+    const url = `https://newsapi.org/v2/everything?q=Brasileirão%20Série%20A&language=pt&sortBy=publishedAt&pageSize=5&apiKey=${apiKey}`;
+
+    async function atualizarNoticias() {
+      const mensagem = document.getElementById("message");
+      const container = document.getElementById("news-container");
+
+      mensagem.style.display = "none";
+      container.innerHTML = "<p>Carregando notícias...</p>";
+
+      try {
+        const resposta = await fetch(url);
+        const dados = await resposta.json();
+
+        if (dados.status !== "ok") {
+          container.innerHTML = "<p>Erro ao buscar as notícias.</p>";
+          return;
+        }
+
+        const artigos = dados.articles;
+        if (!artigos || artigos.length === 0) {
+          container.innerHTML = "<p>Nenhuma notícia encontrada.</p>";
+          return;
+        }
+
+        container.innerHTML = "";
+        artigos.forEach(noticia => {
+          const div = document.createElement("div");
+          div.className = "news-item";
+
+          div.innerHTML = `
+            <div class="news-title">${noticia.title}</div>
+            <div class="news-description">${noticia.description || "Sem descrição disponível."}</div>
+            <a class="news-link" href="${noticia.url}" target="_blank">Leia mais</a>
+          `;
+
+          container.appendChild(div);
+        });
+
+        mensagem.style.display = "block";
+        setTimeout(() => mensagem.style.display = "none", 4000);
+
+      } catch (erro) {
+        console.error("Erro ao buscar notícias:", erro);
+        container.innerHTML = "<p>Erro ao carregar as notícias. Verifique sua conexão ou tente novamente.</p>";
+      }
+    }
+
+    // Carregar ao abrir a página
+    atualizarNoticias();
+  </script>
+
+</body>
