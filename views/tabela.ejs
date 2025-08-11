@@ -315,7 +315,7 @@
       var searchText = this.value.toLowerCase();
       var rows = document.querySelectorAll('#tabela tr');
 
-      for (var i = 1; i < rows.length; i++) { // DA CERTo
+      for (var i = 1; i < rows.length; i++) { // BURRO
         var team = rows[i].cells[1].textContent.toLowerCase();
         if (team.includes(searchText)) {
           rows[i].style.display = '';
