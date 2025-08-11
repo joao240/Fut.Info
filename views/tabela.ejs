@@ -300,7 +300,7 @@
       <td>11</td>
       <td>0</td>
       <td>3</td>
-      <td>6</td>
+      <td>8</td>
       <td>❌❌⚪❌⚪</td>
     </tr>
 
@@ -315,7 +315,7 @@
       var searchText = this.value.toLowerCase();
       var rows = document.querySelectorAll('#tabela tr');
 
-      for (var i = 1; i < rows.length; i++) { // começa do 1 pra ignorar header
+      for (var i = 1; i < rows.length; i++) { // DA CERTo
         var team = rows[i].cells[1].textContent.toLowerCase();
         if (team.includes(searchText)) {
           rows[i].style.display = '';
