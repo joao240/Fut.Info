@@ -11,29 +11,28 @@ app.use(express.static("public"));
 // Importando os arquivos JS externos
 const imagens = require("./public/imagens.js");
 
-
 app.get("/", (req, res) => {
-    res.render("login", {});
+    res.render("login");
 });
 
 app.get("/cadastro", (req, res) => {
-    res.render("cadastro", {});
+    res.render("cadastro");
 });
 
 app.get("/menu", (req, res) => {
-    res.render("menu", {});
+    res.render("menu");
 });
 
-app.get("/Tabela", (req, res) => {
-    res.render("tabela", {});
+app.get("/tabela", (req, res) => {
+    res.render("tabela");
 });
 
 app.get("/jogos", (req, res) => {
-    res.render("jogos", {});
+    res.render("jogos");
 });
 
 app.get("/noticias", (req, res) => {
-    res.render("noticias", {});
+    res.render("noticias");
 });
 
 app.listen(port, () => {
